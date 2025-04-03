@@ -1,7 +1,5 @@
 package SOLID_Principles.LSP;
 
-import SOLID_Principles.DeveloperBonusCalculator;
-
 public class Main {
     public static void main(String[] args) {
         Manager manager = new Manager("Chandra Sekhar", 20000);

@@ -1,7 +1,4 @@
-package SOLID_Principles;
-
-import SOLID_Principles.LSP.Developer;
-import SOLID_Principles.LSP.IBonusCalculator;
+package SOLID_Principles.LSP;
 
 public class DeveloperBonusCalculator implements IBonusCalculator<Developer> {
     @Override

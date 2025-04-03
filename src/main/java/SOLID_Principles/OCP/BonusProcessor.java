@@ -5,7 +5,10 @@ public class BonusProcessor {
     public BonusProcessor(IBonusCalculator bonusCalculator) {
         this.bonusCalculator = bonusCalculator;
     }
+    public void setBonusCalculator(IBonusCalculator bonusCalculator) {
+        this.bonusCalculator = bonusCalculator;
+    }
     public double processBonus(Employee employee){
-        return bonusCalculator.caluclateBonus(employee);
+        return bonusCalculator.calculateBonus(employee);
     }
 }

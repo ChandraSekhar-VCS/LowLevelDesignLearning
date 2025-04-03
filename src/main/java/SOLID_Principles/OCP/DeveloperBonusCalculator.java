@@ -1,8 +1,8 @@
 package SOLID_Principles.OCP;
 
-public class DeveloperBonusCalcaulator implements IBonusCalculator{
+public class DeveloperBonusCalculator implements IBonusCalculator{
     @Override
-    public double caluclateBonus(Employee employee) {
+    public double calculateBonus(Employee employee) {
         double bonus = employee.getSalary() * 0.1;
         return bonus;
     }

@@ -1,0 +1,36 @@
+Observer Pattern – Hands-on Task
+
+Objective: Simulate a Stock Market Ticker System using the Observer Pattern, where multiple investors (observers) subscribe to a stock (subject). When the stock price changes, all subscribed investors should be notified.
+
+Components to Implement
+    1. Observer Interface
+        Method: update(double newPrice)
+        Implemented by different investor classes.
+    2. Subject Interface
+        Methods:
+            registerObserver(Observer o)
+            removeObserver(Observer o)
+            notifyObservers()
+    3. Stock Class (ConcreteSubject)
+        Represents a single stock (e.g., Tesla or Apple).
+        Fields:
+            String stockSymbol
+            double price
+            List<Observer> observers
+        On price update, it should automatically notify all observers.
+    4. Investor Class (ConcreteObserver)
+        Represents a stock market investor.
+        Constructor should take investorName
+        Implements Observer and prints a message like:
+            Investor [name] notified: [stockSymbol] price changed to $[price]
+    5. Main Class
+        Register at least 3 different investors to a stock.
+        Change the stock price twice.
+        Remove one investor and change the price again.
+
+Constraints
+    Do not allow observers to access stock’s internal state directly.
+    Make sure observers are notified only on price change.
+    Output must show which investors got notified with new price and stock name.
+    Test with different investor names and price changes.
+

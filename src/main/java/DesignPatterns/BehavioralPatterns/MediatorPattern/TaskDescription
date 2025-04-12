@@ -1,0 +1,12 @@
+Hands-On Task
+Task Name: Air Traffic Control System
+Objective: Implement a mediator pattern where different flights (colleagues) communicate through an Air Traffic Control mediator. When one flight lands, others should be notified they must wait.
+
+Boundaries:
+    Flights must not talk to each other directly.
+    Flights notify the ATC when they want to land.
+    ATC coordinates who can land.
+
+Expected Outcome: When a flight requests landing:
+    If runway is free, ATC allows landing.
+    All other flights are notified to wait.

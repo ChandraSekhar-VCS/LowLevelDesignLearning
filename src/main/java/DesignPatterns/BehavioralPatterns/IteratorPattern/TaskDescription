@@ -1,0 +1,17 @@
+Hands-On Task
+
+Objective: Implement an Iterator Pattern for a SongCollection class that stores songs (title + artist) and allows iteration.
+
+Instructions:
+    Create a Song class (with title and artist).
+    Create an Iterator interface and a SongIterator implementation
+    Create a SongCollection class that:
+    Stores songs in an array or list.
+    Has addSong() and createIterator() methods.
+    Use it in a Main class to:
+    Add 3–5 songs.
+    Iterate and print: Now playing: {title} by {artist}
+
+Boundaries:
+    No need to use java.util.Iterator; implement your own.
+    Your iterator must work independently of the collection.

@@ -1,0 +1,36 @@
+Strategy Pattern – Hands-On Task
+
+Objective: Design a TextEditor that can perform different text formatting strategies based on user choice.
+
+Problem Statement
+    You are building a text editing application. Users can format selected text using different formatting styles like:
+        Uppercase Formatting
+        Lowercase Formatting
+        Capitalize Each Word Formatting
+        Reverse Text Formatting
+    Use the Strategy Pattern to allow easy switching of formatting behavior at runtime.
+
+Requirements
+    Strategy Interface
+        Create a TextFormatStrategy interface with a method:
+            String format(String text);
+    Concrete Strategies
+        Implement at least 4 formatting strategies:
+            UpperCaseFormatter
+            LowerCaseFormatter
+            CapitalizeFormatter
+            ReverseFormatter
+    Context Class
+        Create a TextEditor class that:
+            Accepts a TextFormatStrategy via constructor or setter.
+            Has a method: String publishText(String text) that uses the strategy to format the text.
+    Client
+        In the main() method:
+            Create a TextEditor object
+            Switch between different formatting strategies.
+            Display the formatted output for each.
+
+Constraints
+    Do not use if-else or switch in the TextEditor class.
+    The formatting logic must be encapsulated in separate classes.
+    Keep the input string constant for all formatters: "the quick brown fox jumps over the lazy dog".

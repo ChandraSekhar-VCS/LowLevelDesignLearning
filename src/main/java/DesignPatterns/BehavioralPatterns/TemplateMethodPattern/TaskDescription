@@ -1,0 +1,18 @@
+Hands-On Task
+
+Objective:
+    Design a "Game Level Loader" system where each game level (EasyLevel, HardLevel) follows this structure:
+        Load assets
+        Initialize environment
+        Spawn enemies
+        Display start screen
+    The algorithm is fixed, but the steps vary based on the difficulty level.
+
+Your Task Scope:
+    Create an abstract GameLevelLoader with a loadLevel() method as the template.
+    Override the steps in:
+    EasyLevelLoader
+    HardLevelLoader
+    In your Main class, demonstrate loading both levels using the loadLevel() method.
+    Do not modify the overall sequence of steps in the loadLevel() template.
+

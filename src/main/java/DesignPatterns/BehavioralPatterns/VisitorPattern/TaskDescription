@@ -1,0 +1,35 @@
+ Hands-On Task – Visitor Pattern
+
+Objective: Implement the Visitor Pattern to simulate a tax calculator for different types of shopping items in an e-commerce cart.
+
+Problem Statement
+    You're building a system to calculate taxes for various items in a shopping cart:
+        Book – taxed at 0%
+        Clothing – taxed at 10%
+        Electronics – taxed at 18%
+    Each item should implement a Visitable interface. The visitor (TaxCalculator) will visit each item and apply the corresponding tax rate.
+
+Implementation Expectations
+    1. Define the Element Interface
+        CartItem with method: void accept(TaxVisitor visitor)
+    2. Create Concrete Cart Items
+        Book, Clothing, and Electronics
+        Each holds its own price (float or double)
+        Implements accept(TaxVisitor visitor)
+    3. Create Visitor Interface
+        TaxVisitor with overloads:
+            visit(Book book)
+            visit(Clothing clothing)
+            visit(Electronics electronics)
+    4. Create Concrete Visitor
+        IndiaTaxVisitor implements TaxVisitor
+        Calculates tax and prints:
+            Item Type
+            Base Price
+            Tax Amount
+            Final Price
+        Do NOT store tax values inside the items — all tax logic must remain in the visitor.
+    5. Client Code
+        Create a list of CartItem objects (a mix of Books, Clothing, Electronics)
+        Create a IndiaTaxVisitor
+        Loop through the list and call item.accept(visitor);

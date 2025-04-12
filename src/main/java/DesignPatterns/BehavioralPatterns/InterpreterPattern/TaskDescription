@@ -1,0 +1,34 @@
+Hands-On Task – Interpreter Pattern
+
+Objective: 
+Design a Permission Expression Evaluator that can interpret user permissions written in a simple language like:
+    "read"
+    "write"
+    "read AND write"
+    "read OR delete"
+    "read AND write AND delete"
+You will simulate a system where the user’s permission set is matched against a permission expression.
+
+Requirements
+    Define a basic grammar:
+        Terminal: read, write, delete
+        Non-terminal: AND, OR
+    
+    Implement the Interpreter Pattern:
+        Expression interface
+        PermissionTerminalExpression for each permission keyword
+        AndExpression, OrExpression for combining permissions
+    
+    Create a UserContext:
+        This will store the actual permissions a user has (e.g., ["read", "write"])
+        Expression interpretation should be based on whether these permissions satisfy the given expression.
+
+Functional Expectations
+    Input: user permissions = ["read", "write"], expression = "read AND write"
+    Output: true
+    
+    Input: user permissions = ["read"], expression = "read AND write"
+    Output: false
+    
+    Input: user permissions = ["delete"], expression = "read OR delete"
+    Output: true

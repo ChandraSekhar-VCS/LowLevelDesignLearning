@@ -1,0 +1,14 @@
+Hands-on Task: Ticket Booking State Machine
+
+Objective:
+   Design a ticket booking system with the following states:
+    BookingStartedState → Allows user to select seats.
+    PaymentProcessingState → Accepts payment.
+    TicketIssuedState → Final ticket is issued, no more changes allowed.
+
+Requirements:
+    Implement a TicketBookingContext class.
+    Implement a BookingState interface and 3 concrete state classes.
+    Initial state should be BookingStartedState.
+    The book(), pay(), and issue() methods should behave differently in each state.
+    Add relevant transitions (e.g., from booking → payment → issued).

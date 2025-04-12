@@ -1,0 +1,47 @@
+Hands-On Task: Real-World Application of Chain of Responsibility
+
+Objective: Build a customer support request handling system using the Chain of Responsibility pattern.
+
+Scenario
+    Imagine a software company has a support system where customers raise different types of issues. Depending on the type and severity of the request, it should be handled by:
+    Level 1 Support – handles basic queries (password reset, usage help)
+    Level 2 Support – handles technical issues
+    Level 3 Support – handles critical system bugs or escalations
+    Each level can either handle the request or pass it up the chain if it's too complex.
+
+Task Structure
+    1. Create SupportRequest class
+    It should contain:
+        String issueType (e.g., "general", "technical", "critical")
+        String message (a description of the issue)
+    2. Create SupportHandler abstract class (or interface)
+    This will define:
+        A reference to the next handler
+        An abstract method handleRequest(SupportRequest request)
+    Also define a method: setNextHandler(SupportHandler nextHandler)
+    3. Implement the following concrete handlers
+    Each should check if it can handle the issue type:
+            Level1SupportHandler → handles general
+            Level2SupportHandler → handles technical
+            Level3SupportHandler → handles critical
+        If a handler can't handle the request, it should pass it to the next handler.
+        Each handler must log:
+            "Level X handled the request: <message>" OR
+            "Level X can't handle, passing to next."
+    4. Client Code
+        Instantiate all 3 support handler levels.
+        Link them using setNextHandler(...)
+        Create and process 3 SupportRequest objects for each level.
+
+Example Test Case (Inputs)
+    new SupportRequest("general", "How do I reset my password?");
+    new SupportRequest("technical", "App crashes when I upload a file.");
+    new SupportRequest("critical", "System outage! Clients can't access data.");
+
+Expected Output (Sample)
+    Level 1 handled the request: How do I reset my password?
+    Level 1 can't handle, passing to next.
+    Level 2 handled the request: App crashes when I upload a file.
+    Level 1 can't handle, passing to next.
+    Level 2 can't handle, passing to next.
+    Level 3 handled the request: System outage! Clients can't access data.

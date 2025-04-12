@@ -1,0 +1,17 @@
+Hands-on Task – Memento Pattern
+
+Objective: Implement a drawing tool where the user can add shapes, and undo recent actions.
+
+Requirements:
+    Define a Canvas class with a list of shapes (Strings: e.g., "Circle", "Square").
+    The canvas should:
+        Add shapes.
+        Display current drawing.
+        Be able to save its state as a Memento.
+        Be able to restore to any previous state.
+    Implement a CanvasHistory (Caretaker) to maintain the stack of Mementos.
+    Show undoing two steps in the main method.
+
+Restrictions:
+    Do not use built-in serialization or deep cloning. Use proper Memento design only.
+    Ensure encapsulation: Caretaker should not inspect or modify internal content.

@@ -1,0 +1,20 @@
+Hands-On Task
+
+Implement a Media Player Command System with the following setup:
+
+Task Objective:
+    Create a media player controller that can:
+        Play music
+        Pause music
+        Stop music
+    Your system must contain:
+        Command interface with execute()
+        3 concrete commands: PlayCommand, PauseCommand, StopCommand
+        MediaPlayer as the Receiver
+        RemoteControl as the Invoker
+        Main to simulate client setup and execution
+
+Expected Output:
+    Music is playing...
+    Music paused.
+    Music stopped.

@@ -1,0 +1,38 @@
+Hands-On Task – Proxy Pattern
+
+Scenario: Online Video Streaming Service (Bandwidth Control)
+
+Objective:Implement a proxy that restricts access to high-quality video streams for non-premium users. Only premium users can stream videos in HD or higher quality. Free users are restricted to SD (Standard Definition).
+
+Components to Create:
+    VideoStreamer (Interface)
+        Define a method:
+            void streamVideo(String videoName, String quality)
+            Where quality can be: "SD", "HD", "4K"
+    RealVideoStreamer (RealSubject)
+        Simulate streaming the video by printing:
+        "Streaming '<videoName>' in <quality> quality..."
+    VideoStreamerProxy (Proxy)
+        Intercepts the call to RealVideoStreamer.
+        Logic:
+            If the user is premium, allow all quality levels.
+            If the user is free, only allow "SD".
+            If the quality is "HD" or "4K", throw an Exception with message:
+            "Access Denied: Upgrade to premium to stream in HD or higher."
+    Client (Main method)
+        Test the proxy with:
+            A premium user trying to stream a "4K" video.
+            A free user trying to stream:
+                a "SD" video (should work)
+                a "HD" video (should throw exception)
+
+Constraints:
+    Do not add extra responsibilities like buffering, downloading, etc.
+    Focus only on the proxy logic for access control based on user type.
+    Use composition, not inheritance.
+    Make sure to follow our standard format and clean structure.
+
+Expected Output (Sample)
+    Streaming 'Interstellar' in 4K quality...
+    Streaming 'Inception' in SD quality...
+    Access Denied: Upgrade to premium to stream in HD or higher.

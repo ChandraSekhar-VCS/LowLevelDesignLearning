@@ -1,0 +1,35 @@
+Hands-on Task: Composite Design Pattern
+
+Task Title: Organization Hierarchy Viewer
+
+Problem Statement:
+    You are asked to model an organizational hierarchy for a company.
+    In this hierarchy:
+        Employees are either:
+            Individual contributors (e.g., Developers, Designers)
+            or Managers who can manage other employees (managers or individual contributors
+    Design a system where all employees can be treated uniformly regardless of whether they are an individual or a manager.
+
+Goal:
+    Demonstrate the Composite Pattern by implementing:
+    A common interface Employee with a method like showDetails().
+    Two types:
+        IndividualContributor (Leaf)
+        Manager (Composite – can manage multiple Employees)
+
+Requirements:
+    1. Interface
+        Employee interface with method showDetails()
+    2. Leaf Class
+    IndividualContributor class
+        Fields: name, position
+        Implements showDetails() to print name and position
+    3. Composite Class
+    Manager class
+        Fields:
+            name, position
+            Maintains a list of Employee references (both other Managers and IndividualContributors)
+        Has:
+            addEmployee(Employee emp)
+            removeEmployee(Employee emp)
+            showDetails() to print manager info and recursively call showDetails() of subordinates

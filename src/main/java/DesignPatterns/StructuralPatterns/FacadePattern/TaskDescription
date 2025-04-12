@@ -1,0 +1,23 @@
+Hands-on Task
+
+Objective: Simulate an Online Learning System with a Facade to simplify the course-enrollment process.
+
+Subsystems to Create:
+    CourseService – Registers course
+    PaymentService – Makes payment
+    NotificationService – Sends confirmation email
+    StudentService – Updates student profile
+
+Your Facade Class:
+    LearningPlatformFacade with method:
+    enrollInCourse(String courseName, String studentName)
+Expected Output:
+    Registering course: Java Backend
+    Processing payment for: Java Backend
+    Sending confirmation email to student: Chandra
+    Updating profile for student: Chandra
+    Enrollment complete!
+Constraints:
+    Do NOT use inheritance between subsystem classes
+    Keep each subsystem as a separate service class
+    No need to build a real payment or email system — just simulate with print statements

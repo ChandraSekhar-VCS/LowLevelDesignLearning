@@ -1,0 +1,69 @@
+Hands-On Task: Coffee Shop Billing System using Decorator Pattern
+
+Objective:
+Build a dynamic billing system for a coffee shop where customers can choose a base beverage and optionally add any combination of ingredients like milk, sugar, whipped cream, etc.
+You will use the Decorator Pattern to model this flexible structure.
+
+System Requirements:
+    There is a base interface called Beverage with a method getDescription() and getCost().
+    There are ConcreteComponent classes like:
+        Espresso
+        Latte
+    You must implement ConcreteDecorator classes like:
+        Milk
+        Sugar
+        WhippedCream
+        The decorators must extend a common BeverageDecorator abstract class and wrap a Beverage object.
+
+Class Structure (you must implement):
+    Interface:
+        Beverage
+        String getDescription(
+        double getCost()
+    Concrete Components:
+        Espresso
+        Latte
+    Abstract Decorator:
+        BeverageDecorator implements Beverage
+        Holds reference to a Beverage object
+        Forwards calls to the wrapped component
+    Concrete Decorators:
+        MilkDecorator
+        SugarDecorator
+        WhippedCreamDecorator
+    Client Class:
+        Main
+            Create multiple combinations like:
+            Espresso + Milk + Sugar
+            Latte + WhippedCream + Milk
+
+Functional Expectations:
+    Each decorator should:
+    Add to the description of the beverage.
+    Add to the cost of the beverage.
+
+Example output:
+    Order: Espresso, Milk, Sugar
+    Total Cost: ₹175.0
+    Order: Latte, Whipped Cream
+    Total Cost: ₹160.0
+You can assume base costs as:
+    Espresso = ₹100
+    Latte = ₹120
+    Milk = ₹20
+    Sugar = ₹10
+    WhippedCream = ₹30
+
+Boundaries & Guidelines:
+    Do not modify existing components to add features.
+    All new behavior must be added using decorators.
+    Use constructor injection to wrap the decorated object.
+    Keep classes clean and logically separated.
+    Use System.out.println() to print final output in Main.
+
+Expected Outcome:
+    You should have:
+        A fully working Decorator Pattern implementation.
+        At least 2 different decorated beverage combinations in the Main class.
+        Clear and formatted outputs for cost and description.
+

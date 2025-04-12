@@ -1,0 +1,22 @@
+Hands-On Task: Adapter Pattern with Documentation
+
+Problem Statement:
+You're building a media player. It supports MP3 playback natively, but now you want to extend support for MP4 and VLC formats. Instead of changing your core player, you'll use the Adapter Pattern to add support for new formats.
+
+Your Task: Implement the following with documentation
+1. Target Interface – MediaPlayer
+    Declare a method play(String audioType, String fileName)
+    This is the interface your client (Main app) expects.
+2. Adaptee Classes – VlcPlayer and Mp4Player
+    Each class should implement a new interface AdvancedMediaPlayer
+    Each one supports only its specific format.
+3. Adapter Class – MediaAdapter
+    Implements MediaPlayer
+    Internally uses VlcPlayer or Mp4Player based on the audio type.
+4. Concrete Class – AudioPlayer
+    Implements MediaPlayer
+    Plays MP3 by default.
+    Uses MediaAdapter to play other formats.
+5. Client – Main
+    Test with .mp3, .vlc, and .mp4 formats.
+    Print appropriate messages for unsupported formats.

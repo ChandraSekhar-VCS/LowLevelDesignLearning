@@ -1,0 +1,38 @@
+Task: Game Tree Rendering System Using Flyweight Pattern
+
+Objective: Design a memory-efficient system that renders different types of trees (Oak, Pine, Mango) at various (x, y) positions on a game map using the Flyweight Pattern.
+
+Required Classes:
+    Tree (Flyweight interface)
+        Method: render(int x, int y)
+    Concrete Flyweights:
+        Create separate classes that implement Tree:
+            OakTree
+            PineTree
+            MangoTree
+        Each must:
+            Have an intrinsic state: name of the tree, texture or color (any fixed internal info).
+            In render(x, y), print a message like:
+            Rendering Oak Tree at (100, 200) with texture green-leafy.png
+    TreeFactory
+        A Flyweight Factory that creates or reuses existing tree types.
+        Tree getTree(String type)
+        Return the shared instance from a map.
+        Only create a new one if not already in the map.
+    GameMapRenderer (Client)
+        Simulate a 2D map where trees are rendered at different coordinates.
+        Get flyweight trees from TreeFactory.
+        Call render(x, y) with different extrinsic states.
+        You should render at least 6 trees, with some trees repeated (to test object reuse).
+        After rendering, verify whether reused trees are actually same objects using identity check (==).
+
+Sample Expected Output:
+    Rendering Oak Tree at (100, 200) with texture green-leafy.png
+    Rendering Oak Tree at (120, 240) with texture green-leafy.png
+    Rendering Pine Tree at (200, 400) with texture thin-needle.png
+    Rendering Mango Tree at (500, 700) with texture mango-shape.png
+    Rendering Oak Tree at (900, 100) with texture green-leafy.png
+    Is oak1 == oak2? true
+Constraints:
+    No inheritance from outside classes. Keep the design clean.
+    Don't pass extrinsic state inside constructors — only to render() method.

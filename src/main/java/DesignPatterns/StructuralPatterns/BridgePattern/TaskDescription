@@ -1,0 +1,34 @@
+Hands-On Task: Bridge Pattern Implementation
+
+Goal:
+Implement a Messaging System where:
+    You have different Message Senders like EmailSender, SmsSender, and PushNotificationSender.
+    You have different types of Messages like TextMessage and UrgentMessage that can use any sender type.
+    This will demonstrate how you can decouple message types from the way they are sent.
+
+Your Task Structure:
+    Implementor Interface
+        Create an interface MessageSender with a method:
+            void sendMessage(String message);
+    Concrete Implementors
+        Implement the interface in 3 classes:
+        EmailSender
+        SmsSender
+        PushNotificationSender
+        Each should print how the message is being sent. Example:
+        Sending Email: Hello World
+        Abstraction
+            Create an abstract class Message that has a MessageSender as a field and an abstract method:
+            void send(String content);
+    Refined Abstractions
+        Create two classes that extend Message:
+            TextMessage
+            UrgentMessage
+        Implement the send() method to print appropriate formatting like:
+            [Text] Sending Email: Hello World
+            [Urgent] Sending SMS: SYSTEM DOWN!
+    Client (Main method)
+        Create different combinations:
+            Text message via Email
+            Urgent message via SMS
+            Urgent message via Push Notification

@@ -1,0 +1,13 @@
+Hands-On Task: Implement ISP in a Payment System
+
+Task Instructions:
+    Create an interface IPaymentProcessor with methods:
+        processCreditCardPayment()
+        processDebitCardPayment()
+        processUPIPayment()
+    Create three classes implementing IPaymentProcessor:
+        CreditCardProcessor (Only supports processCreditCardPayment())
+        DebitCardProcessor (Only supports processDebitCardPayment())
+        UPIPaymentProcessor (Only supports processUPIPayment())
+
+If a class does not support a method, do NOT throw an exception (Avoid ISP violation).

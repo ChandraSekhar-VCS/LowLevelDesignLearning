@@ -1,0 +1,15 @@
+📝 Hands-On Task
+
+Task is to apply DIP in a real-world scenario:
+    Imagine a NotificationService that sends notifications via Email and SMS.
+    Currently, NotificationService directly depends on EmailSender and SMSSender.
+    Apply DIP to ensure NotificationService depends on an abstraction (INotificationSender) instead of concrete classes.
+
+Task Instructions:
+    Create an interface INotificationSender with a method sendNotification(String message).
+    Implement two classes:
+        EmailSender that implements INotificationSender and prints "Sending Email: [message]".
+        SMSSender that implements INotificationSender and prints "Sending SMS: [message]".
+    Modify NotificationService to depend on INotificationSender instead of concrete classes.
+    Use constructor injection to provide INotificationSender when creating NotificationService.
+    In the main method, create instances of NotificationService with both EmailSender and SMSSender and send notifications.

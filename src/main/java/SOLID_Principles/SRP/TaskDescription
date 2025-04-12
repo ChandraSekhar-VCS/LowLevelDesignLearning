@@ -1,0 +1,16 @@
+Hands-on Task: Applying SRP in a Real-world Scenario
+
+Task: Refactor an Employee Management System
+
+Objective: Break down an Employee Management System into separate responsibilities.
+
+Instructions:
+    Create an Employee class that contains name, position, and salary.
+    Create an EmployeeDataHandler class that only handles storing and retrieving employee data.
+    Create an EmployeeSalaryCalculator class that calculates and updates salary.
+    Create an EmployeeReportGenerator class that generates a report for employees.
+    Write a Main class where you:
+        Create Employee objects.
+        Use the separate classes for handling data, salary, and report generation.
+
+🔹 Follow SRP strictly – Ensure that each class has only one responsibility.

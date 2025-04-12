@@ -1,0 +1,16 @@
+Hands-on Task: Apply OCP to an Employee Bonus System
+
+Task: Implement a Bonus Calculation System
+
+Objective: Design a system where different types of employees get different bonuses without modifying existing classes.
+
+Instructions:
+    Create an Employee class with name, position, and salary.
+    Create an IBonusCalculator interface with a method double calculateBonus(Employee employee).
+    Create two bonus calculation classes that implement IBonusCalculator:
+    ManagerBonusCalculator – Bonus = 15% of salary
+    DeveloperBonusCalculator – Bonus = 10% of salary
+    Modify BonusProcessor class to use the IBonusCalculator interface instead of if-else statements.
+    In Main, create Employee objects and test the bonus calculations.
+
+🔹 Follow OCP strictly – No modification of existing code when adding new employee roles.

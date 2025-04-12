@@ -1,0 +1,14 @@
+Apply Liskov Substitution Principle (LSP) in a different scenario.
+
+Task: Apply LSP to Employee Bonuses
+
+Modify your existing Employee bonus system so that:
+    Instead of using a single interface IBonusCalculator for all types of employees, create a separate interface for each type of employee (e.g., ManagerBonusCalculator, DeveloperBonusCalculator).
+    Ensure that each subclass strictly follows the rules of its superclass/interface without modifying its expected behavior.
+
+✅ Steps:
+    Refactor your existing bonus calculation system so that:
+    Each employee type (Manager, Developer) has its own bonus calculation interface.
+    The BonusProcessor should accept only IBonusCalculator and not modify any subclass behavior.
+    Test the code by creating employees and calculating their bonuses.
+

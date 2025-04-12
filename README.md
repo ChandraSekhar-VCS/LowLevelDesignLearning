@@ -6,10 +6,10 @@ This repository documents my structured learning journey of **Design Principles*
 
 ## 📚 Table of Contents
 
-1. [SOLID Principles](#1-solid-principles)
-2. [Creational Design Patterns](#2-creational-design-patterns)
-3. [Structural Design Patterns](#3-structural-design-patterns)
-4. [Behavioral Design Patterns](#4-behavioral-design-patterns)
+1. [SOLID Principles](src/main/java/SOLID_Principles)
+2. [Creational Design Patterns](src/main/java/DesignPatterns/CreationalPatterns)
+3. [Structural Design Patterns](src/main/java/DesignPatterns/StructuralPatterns)
+4. [Behavioral Design Patterns](src/main/java/DesignPatterns/BehavioralPatterns)
 
 ---
 
@@ -103,7 +103,7 @@ This repository is a personal learning space and is not open to contributions. H
 
 ## 📬 Contact
 
-Reach me on [LinkedIn](https://www.linkedin.com/in/chandrasekhar-vcs) if you want to connect or collaborate on backend development projects.
+Reach me on [LinkedIn](https://www.linkedin.com/in/chandra-sekhar-vipparla/) if you want to connect or collaborate on backend development projects.
 
 ---
 

@@ -1,0 +1,35 @@
+Builder Pattern – Hands-On Task
+
+Objective:
+    Create a User profile system using the Builder Design Pattern. This will simulate building a User object with various optional fields, some required, and allow you to create users with different combinations of data.
+
+User Object Requirements:
+    Your User class will have:
+        Required Fields:
+            String name
+            String email
+        Optional Fields:
+            int age
+            String phone
+            String address
+            String gender
+            String profession
+
+Task Instructions:
+    Step 1: Create the User class (Product)
+        Make the constructor private.
+        Include all fields: required + optional.
+        Add a showUserDetails() method to display the full profile.
+    Step 2: Create a static nested UserBuilder class inside User
+        Add matching fields to UserBuilder.
+        Create a constructor that accepts required fields (name, email).
+        Provide chained setter methods for optional fields.
+        e.g., UserBuilder setAge(int age), setAddress(String address), etc.
+        Add a build() method that returns a new User object.
+    Step 3: Link the UserBuilder to the User object
+        In User, create a private constructor that takes a UserBuilder instance.
+        Initialize the fields in the User using the UserBuilder instance.
+    Step 4: Client Code (Main class)
+        Create multiple User objects using different combinations of fields.
+        Use chained method calls to set optional fields.
+        Call showUserDetails() on each to verify correct data is shown.

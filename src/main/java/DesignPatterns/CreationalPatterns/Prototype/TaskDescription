@@ -1,0 +1,26 @@
+Problem Statement:
+    You're building a system where you need to frequently clone Book objects in a library catalog. Each book has:
+        title (String)
+        author (String)
+        List<String> tags (e.g., "Fiction", "Science", etc.)
+    Since each book has a list of tags, you must implement deep copy so cloned books do not share the same tags list in memory.
+
+Your Task:
+    Create a Prototype interface
+    Method: Book cloneBook();
+    Create a Book class that implements this Prototype interface
+        Fields: title, author, List<String> tags
+        Add a constructor to initialize the fields.
+        Add addTag(String tag) and showDetails() methods
+        Implement the cloneBook() method to return a deep copy of the Book.
+    Client Class
+        Create one original book object with some tags.
+        Clone it to a new book.
+        Add new tags to the cloned book only.
+        Show both books to verify deep copying (i.e., changing one’s tags doesn’t affect the other).
+
+Constraints:
+    Don’t use any external libraries for cloning.
+    Ensure the tags list is copied deeply.
+    You must use proper object-oriented principles.
+    Follow naming and access modifiers properly.

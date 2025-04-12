@@ -1,0 +1,28 @@
+Hands-on Task: Implementing Singleton in a Real-World Scenario
+
+Objective: You will implement a Singleton Pattern in a real-world use case: Logger Service.
+
+Requirements
+    Create a Singleton Logger Class
+        The logger should only have one instance across the application.
+        The instance should be thread-safe and efficient.
+        Use the Bill Pugh Singleton method for implementation.
+    Implement Logging Functionalities
+        Provide a method to log messages (logMessage(String message)).
+        Messages should include timestamps.
+        The log should differentiate INFO, WARN, and ERROR messages.
+    Demonstrate Usage in a Main Class
+        Use the singleton logger in multiple places (multiple threads, if possible).
+        Ensure all logs are handled by the same instance.
+
+Expected Outcome
+    You will create a thread-safe, efficient singleton logger.
+    All logs should be printed in the correct format.
+    The same instance of the logger should be used throughout the application.
+
+Hints for Implementation
+    Define an enum for log levels: INFO, WARN, ERROR.
+    Store logs with timestamps.
+    Ensure thread safety using Bill Pugh Singleton.
+    Use synchronized for writing logs if necessary.
+    Implement a Main class to test multiple log messages.

@@ -1,0 +1,55 @@
+Hands-on Task: Implement Abstract Factory Pattern for a Notification System
+
+Objective:
+You will implement an Abstract Factory Pattern to create different types of notifications (Email, SMS, and Push) in Basic and Premium variants.
+
+Task Instructions
+    Define Abstract Product Interfaces
+        Create three interfaces for different notification types:
+            IEmailNotification
+            ISMSNotification
+            IPushNotification
+        Each interface should have a send(String message) method.
+
+    Implement Concrete Product Classes
+        Implement two sets of concrete classes for each notification type:
+            Basic variant
+            BasicEmailNotification
+            BasicSMSNotification
+            BasicPushNotification
+            Premium variant
+            PremiumEmailNotification
+            PremiumSMSNotification
+            PremiumPushNotification
+        Each class should implement its respective interface and print an appropriate message.
+
+    Create an Abstract Factory Interface
+        Define an interface INotificationFactory with methods:
+            IEmailNotification createEmailNotification();
+            ISMSNotification createSMSNotification();
+            IPushNotification createPushNotification();
+        This factory will be responsible for creating families of notifications.
+
+    Implement Concrete Factory Classes
+        Implement two concrete factories:
+            BasicNotificationFactory → Creates basic notifications.
+            PremiumNotificationFactory → Creates premium notifications.
+            Each factory should implement INotificationFactory and return the appropriate product instances.
+        Implement the Client Code
+            Ask the user whether they want Basic or Premium notifications.
+            Ask for the notification type (Email, SMS, or Push).
+            Use the Abstract Factory to create and send the notification.
+
+Expected Output
+    Select Notification Type (Email/SMS/Push): Email
+    Select Variant (Basic/Premium): Premium
+    Sending Premium Email: Your premium email is sent!
+
+    Select Notification Type (Email/SMS/Push): SMS
+    Select Variant (Basic/Premium): Basic
+    Sending Basic SMS: Your basic SMS is sent!
+
+Constraints
+    Follow SOLID principles.
+    No direct instantiation of concrete products (new BasicEmailNotification() should only happen inside the factories).
+    The client should only interact with the abstract factory and the product interfaces.

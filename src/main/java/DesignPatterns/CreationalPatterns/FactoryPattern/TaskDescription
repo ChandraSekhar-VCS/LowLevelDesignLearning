@@ -1,0 +1,23 @@
+Factory Pattern – Hands-On Task
+
+Goal:Implement a simple notification system using the Factory Pattern. You should be able to create different types of notifications (Email, SMS, Push) using a factory class, without directly instantiating them in the client code.
+
+Requirements:
+    Interface: INotification
+    Method: void send(String message);
+    Concrete Classes:
+        EmailNotification → prints: "Sending Email: <message>"
+        SMSNotification → prints: "Sending SMS: <message>"
+        PushNotification → prints: "Sending Push Notification: <message>"
+
+    Factory Class: NotificationFactory
+        Method: INotification createNotification(String type);
+        Accepts "EMAIL", "SMS", "PUSH" (case-insensitive) and returns appropriate implementation
+    Client Code (Main class):
+        Ask the user to enter the notification type.
+        Use the factory to create the appropriate notification and call the send method.
+
+Constraints:
+    You must not create notification objects directly in the Main class.
+    The Main class should only rely on the factory.
+    Follow good OOP practices.

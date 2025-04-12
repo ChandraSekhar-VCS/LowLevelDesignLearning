@@ -1,0 +1,56 @@
+SOLID Principles Final Task: Build a Payment and Notification System
+
+This task will test your understanding of all SOLID principles in a single project.
+
+Task Overview
+    You need to design a system where:
+    Users can make payments using different methods (Credit Card, Debit Card, UPI).
+    Users receive notifications about payment status via Email and SMS.
+    The design should follow SOLID principles to ensure flexibility, maintainability, and scalability.
+
+Requirements & Constraints
+    Single Responsibility Principle (SRP)
+        Payment processing and notifications should be in separate classes with a clear responsibility.
+    Open/Closed Principle (OCP)
+        New payment methods and notification types should be easily added without modifying existing code.
+    Liskov Substitution Principle (LSP)
+        Subclasses should correctly implement their parent interfaces.
+
+Example:
+    A CreditCardProcessor should work without breaking existing code when used in place of a general payment processor.
+    Interface Segregation Principle (ISP)
+        Instead of a single large interface for payments, different interfaces should exist for Credit Card, Debit Card, and UPI payments.
+
+    Dependency Inversion Principle (DIP)
+        High-level modules (PaymentService, NotificationService) should depend on abstractions (interfaces), not concrete classes.
+
+        Example: PaymentService should depend on IPaymentProcessor rather than a specific CreditCardProcessor.
+
+Classes You Need to Implement
+    Payment Processing
+        IPaymentProcessor (Interface) → Parent for all payment processors.
+        ICreditCardProcessor / IDebitCardProcessor / IUPIPaymentProcessor (Interfaces) → Specific payment types.
+        CreditCardProcessor / DebitCardProcessor / UPIPaymentProcessor (Concrete Classes) → Implement interfaces.
+        PaymentService (Class) → Uses a payment processor to handle payments.
+    Notification System
+        INotificationSender (Interface) → Parent for all notification senders.
+        EmailSender / SMSSender (Concrete Classes) → Implement notification sender interface.
+        NotificationService (Class) → Uses a notification sender to send messages.
+    High-Level Service
+        TransactionManager (Class)
+        Accepts a payment processor and a notification sender.
+        Processes the payment and sends a notification.
+
+Expected Workflow
+    User initiates a payment.
+    TransactionManager selects the correct Payment Processor (Credit Card, Debit Card, or UPI).
+    Payment is processed.
+    TransactionManager selects the Notification Sender (Email or SMS).
+    User gets notified about the transaction status.
+
+Instructions
+    Step 1: Define appropriate interfaces for payments and notifications.
+    Step 2: Implement concrete classes for each payment method and notification type.
+    Step 3: Ensure PaymentService and NotificationService depend on abstractions.
+    Step 4: Implement TransactionManager to coordinate payments and notifications.
+    Step 5: Create a Main class to simulate payment transactions.
